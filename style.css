@@ -14,6 +14,7 @@ body{
 
 /* Header */
 
+
 header{
     background-color: white;
     width: 100%;
@@ -84,46 +85,139 @@ h2{
     margin-left: 20px;
 }
 /* Hero Section */
+/* HERO SECTION */
 
-.hero{
-    padding: 80px 20px;
+.photo{
+    padding: 140px 20px 80px;
+    background: linear-gradient(
+        135deg,
+        #f8fff0,
+        #e8f8d8
+    );
 }
 
-.hero-content{
+.photo-content{
     max-width: 1200px;
     margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 40px;
+    gap: 60px;
+}
+
+.intro{
+    font-size: 22px;
+    font-weight: bold;
 }
 
 .text h2{
-    font-size: clam(1rem, 2vw, 3rem);
-    max-width: 500px;
+    font-size: 60px;
+    margin-top: 15px;
+    line-height: 1.2;
+}
+
+.text h2 span{
+    color: #75c310;
+    display: block;
 }
 
 .text p{
     font-size: 18px;
-    margin: 20px 0;
-    max-width: 500px;
+    margin: 25px 0;
+    line-height: 1.8;
+    max-width: 550px;
+}
+
+.hero-buttons{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
 }
 
 .portfolio-btn{
-    background-color: #75c310;
+    background: #75c310;
     color: white;
     border: none;
     padding: 15px 35px;
-    border-radius: 30px;
+    border-radius: 40px;
     font-size: 18px;
     cursor: pointer;
+    transition: 0.3s;
 }
 
-.hero-content img{
-    width: 450px;
-    max-width: 100%;
+.portfolio-btn:hover{
+    transform: translateY(-3px);
 }
 
+.available{
+    border: 2px dashed #75c310;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+/* IMAGE */
+
+.image-box{
+    position: relative;
+}
+
+.image-box img{
+    width: 420px;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 10px solid white;
+    box-shadow: 0 0 40px rgba(117,195,16,0.5);
+}
+
+.work-badge{
+    position: absolute;
+    bottom: 20px;
+    right: -10px;
+    background: #75c310;
+    color: white;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .photo-content{
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .text h2{
+        font-size: 40px;
+    }
+
+    .image-box img{
+        width: 280px;
+        height: 280px;
+    }
+
+    .work-badge{
+        width: 90px;
+        height: 90px;
+        font-size: 12px;
+    }
+
+    .hero-buttons{
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
 /* Skills Section */
 
 #skills{
