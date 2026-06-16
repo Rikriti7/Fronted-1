@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: black;
+        color: white;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-family: monospace;
+        flex-direction: column;
+    }
+    
+    header{
+         font-size: 48px;
+        font-weight: bold;
+        margin-bottom: 120px;
+        color: white;
+       
+    }
+    #count{
+    font-size: 80px;
+    margin: 20px 0;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 15px #60a5fa;
+}
+    .counter{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+           
+    }
+    .btn{
+        width: 80px ;
+        height: 40px;
+        border: none;
+        cursor: pointer;
+        background-color: green;
+        color:blanchedalmond;
+        font-size: 20px;
+        transition: 0.2s;
+         background-color: navy;
+    }
+    h1{
+    font-size: 60px;
+    color: white;
+    margin-bottom: 30px;
+    text-shadow: 0 0 10px blue;
+
+    }
+    button:hover{
+    background-color: limegreen;
+    transform: scale(1.05);
+    }
+    .btn:active{
+    transform: scale(0.9);
+    background-color: rgb(73, 0, 100);
+    }
+    
+
+</style>
+<body>
+    <main>
+        <header> counter app</header>
+            <!-- <h1>Welcome</h1>
+            <h1 class="head">Hello other world</h1>
+            <ul class = "list">Friuts</ul>
+            <ul id="fulllist" class="'list">Friuts -->
+<!-- </ul> -->
+    <h1 id="count">0</h1>
+        <div class="counter">
+            <button class="btn" onclick="increase()">+</button>
+        <button class="btn" onclick="decrease()">-</button>
+        <button class="btn" onclick="resetCounter()">Reset</button>
+        </div>
+    </main>
+    <script>
+
+        // const heading = document.querySelectorAll("#head");
+        // heading.textContent = "Hello World";
+        // heading.style.fontSize = "20px";
+
+        
+        // const fulllist = document.querySelectorAll(".list");
+        //  const list = document.createElement("li");
+        //  list.textContent = "Apple";
+        //  fulllist.appendChild(list);
+        let count = 0;
+
+function updateDisplay(){
+    document.getElementById("count").textContent = count;
+}
+function increase(){
+    count++;
+    updateDisplay();
+}
+
+function decrease(){
+    count--;
+    updateDisplay();
+}
+
+function resetCounter(){
+    count = 0;
+    updateDisplay();
+}
+    </script>
+</body>
+</html>
